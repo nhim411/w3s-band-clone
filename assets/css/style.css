@@ -1,0 +1,298 @@
+/* Font face Lato */
+/* latin-ext */
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/lato/v17/S6uyw4BMUTPHjxAwXjeu.woff2)
+    format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/lato/v17/S6uyw4BMUTPHjx4wXg.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+/* Reset CSS */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Lato", Helvetica, sans-serif;
+}
+
+.clear {
+  clear: both;
+}
+
+.text-white {
+  color: white !important;
+}
+
+#main {
+}
+
+/* Header */
+#header {
+  height: 46px;
+  background-color: #000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+/* Nav */
+#nav,
+.subnav {
+  list-style-type: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#nav {
+  display: inline-block;
+}
+#nav > li {
+  display: inline-block;
+  position: relative;
+}
+
+#nav > li > a {
+  color: #fff;
+  text-transform: uppercase;
+}
+
+#nav li a {
+  display: inline-block;
+  text-decoration: none;
+  line-height: 46px;
+  padding: 0 24px;
+}
+
+#nav > li:hover > a,
+#nav .subnav li:hover a {
+  color: #000;
+  background-color: #ccc;
+}
+
+#nav .subnav {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  min-width: 160px;
+}
+
+#nav li:hover .subnav {
+  display: block;
+}
+
+#nav .subnav li {
+  display: block;
+}
+
+#nav .subnav a {
+  display: block;
+  text-decoration: none;
+  color: #000;
+  padding: 0 12px;
+  line-height: 38px;
+}
+
+#header .search-button {
+  float: right;
+  line-height: 46px;
+  min-width: 54px;
+}
+
+#header .search-button:hover {
+  background-color: red;
+  cursor: pointer;
+}
+
+#header .search-icon {
+  padding: 0 21px;
+  font-size: 20px;
+  color: #fff;
+}
+
+/* Slider */
+#slider {
+  margin-top: 46px;
+  padding-top: 50%;
+  background: url(/assets/img/sliders/chicago.jpg) top center / cover no-repeat;
+  position: relative;
+}
+
+#slider .text-content {
+  text-align: center;
+  position: absolute;
+  color: #fff;
+  width: 100%;
+  bottom: 47px;
+}
+
+#slider .text-heading {
+  font-weight: 500;
+  font-size: 24px;
+}
+
+#slider .text-description {
+  margin-top: 24px;
+  font-size: 15px;
+}
+
+#content {
+}
+
+#content .content-section {
+  width: 800px;
+  margin: 0 auto;
+  padding: 64px 0;
+}
+
+#content .section-heading {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 500;
+  letter-spacing: 4px;
+  line-height: 1.6;
+}
+
+#content .section-sub-heading {
+  text-align: center;
+  font-size: 15px;
+  margin-top: 25px;
+  font-style: italic;
+  opacity: 0.6;
+}
+
+#content .member-list {
+  margin-top: 48px;
+}
+
+#content .about-text {
+  text-align: justify;
+  margin-top: 25px;
+}
+
+#content .member-item {
+  float: left;
+  width: calc(100% / 3);
+  text-align: center;
+}
+
+#content .member-name {
+  font-size: 15px;
+}
+
+#content .member-img {
+  width: 154px;
+  margin-top: 15px;
+  border-radius: 4px;
+}
+/* tour section */
+#content .tour-section {
+  background-color: #000;
+}
+/* Tickets */
+.ticket-list {
+  background-color: white;
+  margin-top: 40px;
+}
+
+.ticket-list li {
+  font-size: 15px;
+  padding: 11px 16px;
+  border-bottom: 1px solid #ddd;
+  color: #757575;
+  list-style-type: none;
+}
+
+.ticket-list .sold-out {
+  background-color: #f44336;
+  color: white;
+  padding: 3px 4px;
+  margin-left: 16px;
+}
+
+.ticket-list .quantity {
+  float: right;
+  margin-right: 16px;
+  width: 24px;
+  height: 24px;
+  background-color: #000;
+  color: #fff;
+  line-height: 24px;
+  text-align: center;
+  border-radius: 50%;
+  margin-top: -3px;
+}
+
+/* places */
+.places-list {
+  margin: 32px -8px 48px;
+}
+
+.places-item {
+  float: left;
+  width: 33.333333%;
+  padding: 0 8px;
+}
+
+.place-img {
+  width: 100%;
+  display: block;
+}
+
+.place-img:hover {
+  opacity: 0.6;
+}
+
+.place-body {
+  background: #fff;
+  padding: 16px;
+  font-size: 15px;
+}
+
+.place-heading {
+  font-size: 15px;
+}
+
+.place-time {
+  margin-top: 15px;
+  opacity: 0.6;
+}
+
+.place-dsc {
+  margin-top: 15px;
+  line-height: 1.4;
+}
+
+.place-buy-btn {
+  color: #fff;
+  background-color: #000;
+  text-decoration: none;
+  padding: 11px 16px;
+  display: inline-block;
+  margin-top: 15px;
+}
+
+.place-buy-btn:hover {
+  color: #000;
+  background-color: #ccc;
+}
+
+/* Footer */
