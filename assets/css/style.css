@@ -27,16 +27,56 @@
   box-sizing: border-box;
 }
 
-html {
-  font-family: "Lato", Helvetica, sans-serif;
-}
-
+/* Common */
 .clear {
   clear: both;
 }
 
+.text-center {
+  text-align: center !important;
+}
+
+.row {
+  margin-left: -8px;
+  margin-right: -8px;
+}
+
+.row::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.col {
+  float: left;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.col-third {
+  width: 33.33333%;
+}
+
+.col-half {
+  width: 50%;
+}
+
+.col-full {
+  width: 100%;
+}
 .text-white {
   color: white !important;
+}
+.mt-8 {
+  margin-top: 8px !important;
+}
+
+.mt-16 {
+  margin-top: 16px !important;
+}
+
+html {
+  font-family: "Lato", Helvetica, sans-serif;
 }
 
 #main {
@@ -188,12 +228,6 @@ html {
   margin-top: 25px;
 }
 
-#content .member-item {
-  float: left;
-  width: calc(100% / 3);
-  text-align: center;
-}
-
 #content .member-name {
   font-size: 15px;
 }
@@ -243,13 +277,8 @@ html {
 
 /* places */
 .places-list {
-  margin: 32px -8px 48px;
-}
-
-.places-item {
-  float: left;
-  width: 33.333333%;
-  padding: 0 8px;
+  margin-top: 32px;
+  margin-bottom: 48px;
 }
 
 .place-img {
@@ -291,6 +320,43 @@ html {
 }
 
 .place-buy-btn:hover {
+  color: #000;
+  background-color: #ccc;
+}
+
+/* Contact Form */
+.contact-content {
+  margin-top: 48px;
+}
+
+.contact-info {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.contact-info i[class*="fa-"] {
+  width: 30px;
+}
+
+contact-form {
+  font-size: 15px;
+}
+
+.contact-form .form-control {
+  padding: 10px;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
+.contact-form .form-submit-btn {
+  float: right;
+  padding: 10px 16px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+}
+
+.contact-form .form-submit-btn:hover {
   color: #000;
   background-color: #ccc;
 }
