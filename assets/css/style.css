@@ -363,8 +363,11 @@ contact-form {
   width: 100%;
 }
 /* Footer */
-#footer .social-list {
+
+#footer {
   padding: 64px 16px;
+}
+#footer .social-list {
   text-align: center;
 }
 
@@ -382,8 +385,10 @@ contact-form {
 }
 
 #footer .copyright {
-  color: rgba(0, 0, 0, 0.6);
   margin-top: 10px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.3);
+  font-size: 16px;
 }
 
 #footer .copyright a {
