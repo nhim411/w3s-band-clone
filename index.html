@@ -3,7 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>The band</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/assets/img/favicon.png"
+    />
     <link rel="stylesheet" href="./assets/css/style.css" />
     <link
       rel="stylesheet"
@@ -16,10 +22,10 @@
         <!-- Begin: Nav -->
         <div id="nav">
           <ul id="nav">
-            <li><a href="">Home</a></li>
-            <li><a href="">Band</a></li>
-            <li><a href="">Tour</a></li>
-            <li><a href="">Contact</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#band">Band</a></li>
+            <li><a href="#tour">Tour</a></li>
+            <li><a href="#contact">Contact</a></li>
             <li>
               <a href=""> More <i class="fas fa-caret-down"></i> </a>
               <ul class="subnav">
@@ -52,7 +58,7 @@
 
       <div id="content">
         <!-- About section -->
-        <div class="content-section">
+        <div class="content-section" id="band">
           <h2 class="section-heading">THE BAND</h2>
           <p class="section-sub-heading">We love music</p>
           <p class="about-text">
@@ -96,7 +102,7 @@
           </div>
         </div>
         <!--Begin: Tour section -->
-        <div class="tour-section">
+        <div class="tour-section" id="tour">
           <div class="content-section">
             <h2 class="section-heading text-white">TOUR</h2>
             <p class="section-sub-heading text-white">
@@ -122,7 +128,7 @@
                   <p class="place-dsc">
                     Praesent tincidunt sed tellus ut rutrum sed vitae justo.
                   </p>
-                  <a href="#" class="place-buy-btn">Buy Tickets</a>
+                  <a href="#" class="btn">Buy Tickets</a>
                 </div>
               </div>
               <div class="col col-third">
@@ -137,7 +143,7 @@
                   <p class="place-dsc">
                     Praesent tincidunt sed tellus ut rutrum sed vitae justo.
                   </p>
-                  <a href="#" class="place-buy-btn">Buy Tickets</a>
+                  <a href="#" class="btn">Buy Tickets</a>
                 </div>
               </div>
               <div class="col col-third">
@@ -152,7 +158,7 @@
                   <p class="place-dsc">
                     Praesent tincidunt sed tellus ut rutrum sed vitae justo.
                   </p>
-                  <a href="#" class="place-buy-btn">Buy Tickets</a>
+                  <a href="#" class="btn">Buy Tickets</a>
                 </div>
               </div>
             </div>
@@ -160,8 +166,8 @@
         </div>
         <!-- End: Tour section -->
 
-        <!-- contact section -->
-        <div class="content-section">
+        <!-- Begin: contact section -->
+        <div class="content-section" id="contact">
           <h2 class="section-heading">CONTACT</h2>
           <p class="section-sub-heading">Fan? Drop a note!</p>
           <div class="row contact-content">
@@ -180,6 +186,7 @@
                       id=""
                       placeholder="Name"
                       class="form-control"
+                      required
                     />
                   </div>
                   <div class="col col-half">
@@ -189,6 +196,7 @@
                       id=""
                       placeholder="Email"
                       class="form-control"
+                      required
                     />
                   </div>
                 </div>
@@ -200,11 +208,12 @@
                       id=""
                       placeholder="Message"
                       class="form-control"
+                      required
                     />
                   </div>
                 </div>
                 <input
-                  class="form-submit-btn mt-16"
+                  class="btn mt-16 pull-right"
                   type="submit"
                   value="SEND"
                 />
@@ -212,10 +221,24 @@
             </div>
           </div>
         </div>
+        <!-- End: contact section -->
+        <div class="map-section">
+          <img src="/assets/img/map.jpg" alt="map" />
+        </div>
       </div>
 
       <!-- Footer -->
-      <div id="footer"></div>
+      <div id="footer">
+        <div class="social-list">
+          <a href="#"><i class="fab fa-facebook-square"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-fa fa-snapchat"></i></a>
+          <a href="#"><i class="fab fa-pinterest-p"></i></a
+          ><a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <p class="copyright">Powered by <a href="#">w3.css</a></p>
+        </div>
+      </div>
     </div>
   </body>
 </html>
