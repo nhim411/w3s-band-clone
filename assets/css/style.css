@@ -28,10 +28,6 @@
 }
 
 /* Common */
-.clear {
-  clear: both;
-}
-
 .text-center {
   text-align: center !important;
 }
@@ -75,11 +71,29 @@
   margin-top: 16px !important;
 }
 
-html {
-  font-family: "Lato", Helvetica, sans-serif;
+.pull-right {
+  float: right !important;
 }
 
-#main {
+.btn {
+  color: #fff;
+  background-color: #000;
+  text-decoration: none;
+  padding: 11px 16px;
+  display: inline-block;
+  margin-top: 15px;
+  cursor: pointer;
+  border: none;
+}
+
+.btn:hover {
+  color: #000;
+  background-color: #ccc;
+}
+
+html {
+  font-family: "Lato", Helvetica, sans-serif;
+  scroll-behavior: smooth;
 }
 
 /* Header */
@@ -194,13 +208,10 @@ html {
   font-size: 15px;
 }
 
-#content {
-}
-
 #content .content-section {
   width: 800px;
   margin: 0 auto;
-  padding: 64px 0;
+  padding: 64px 0 112px;
 }
 
 #content .section-heading {
@@ -278,7 +289,6 @@ html {
 /* places */
 .places-list {
   margin-top: 32px;
-  margin-bottom: 48px;
 }
 
 .place-img {
@@ -308,20 +318,6 @@ html {
 .place-dsc {
   margin-top: 15px;
   line-height: 1.4;
-}
-
-.place-buy-btn {
-  color: #fff;
-  background-color: #000;
-  text-decoration: none;
-  padding: 11px 16px;
-  display: inline-block;
-  margin-top: 15px;
-}
-
-.place-buy-btn:hover {
-  color: #000;
-  background-color: #ccc;
 }
 
 /* Contact Form */
@@ -354,6 +350,7 @@ contact-form {
   background-color: #000;
   color: #fff;
   border: none;
+  cursor: pointer;
 }
 
 .contact-form .form-submit-btn:hover {
@@ -361,4 +358,39 @@ contact-form {
   background-color: #ccc;
 }
 
+/* Map section */
+.map-section img {
+  width: 100%;
+}
 /* Footer */
+#footer .social-list {
+  padding: 64px 16px;
+  text-align: center;
+}
+
+#footer .social-list {
+  font-size: 22px;
+}
+
+#footer .social-list a {
+  color: rgba(0, 0, 0, 0.6);
+  text-decoration: none;
+}
+
+#footer .social-list a:hover {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+#footer .copyright {
+  color: rgba(0, 0, 0, 0.6);
+  margin-top: 10px;
+}
+
+#footer .copyright a {
+  color: rgba(0, 0, 0, 0.6);
+  text-decoration: none;
+}
+
+#footer .copyright a:hover {
+  color: rgba(0, 0, 0, 0.3);
+}
