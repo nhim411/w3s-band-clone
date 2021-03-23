@@ -71,6 +71,10 @@
   margin-top: 16px !important;
 }
 
+.mt-32 {
+  margin-top: 32px !important;
+}
+
 .pull-right {
   float: right !important;
 }
@@ -84,6 +88,8 @@
   margin-top: 15px;
   cursor: pointer;
   border: none;
+  appearance: none;
+  -webkit-appearance: none;
 }
 
 .btn:hover {
@@ -128,7 +134,7 @@ html {
 }
 
 #nav li a {
-  display: inline-block;
+  display: block;
   text-decoration: none;
   line-height: 46px;
   padding: 0 24px;
@@ -164,18 +170,39 @@ html {
   padding: 0 12px;
   line-height: 38px;
 }
-
+#header .menu-mobile-btn,
 #header .search-button {
   float: right;
   line-height: 46px;
   min-width: 54px;
 }
 
-#header .search-button:hover {
+#header .menu-mobile-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: none;
+}
+
+.search-button:hover {
   background-color: red;
   cursor: pointer;
 }
 
+#header .menu-mobile-btn:hover {
+  background-color: #ccc;
+}
+
+#header .menu-mobile-btn:hover .menu-icon {
+  color: #000;
+}
+
+#header .menu-button:hover {
+  background-color: red;
+  cursor: pointer;
+}
+
+#header .menu-icon,
 #header .search-icon {
   padding: 0 21px;
   font-size: 20px;
@@ -206,12 +233,17 @@ html {
 #slider .text-description {
   margin-top: 24px;
   font-size: 15px;
+  box-shadow: 0 0 1px #000;
 }
 
 #content .content-section {
   width: 800px;
-  margin: 0 auto;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
   padding: 64px 0 112px;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 #content .section-heading {
@@ -231,7 +263,7 @@ html {
 }
 
 #content .member-list {
-  margin-top: 48px;
+  margin-top: 32px;
 }
 
 #content .about-text {
@@ -288,7 +320,7 @@ html {
 
 /* places */
 .places-list {
-  margin-top: 32px;
+  margin-top: 16px;
 }
 
 .place-img {
@@ -332,6 +364,15 @@ html {
 
 .contact-info i[class*="fa-"] {
   width: 30px;
+}
+
+.contact-info a {
+  color: #101aef;
+  opacity: 0.8;
+}
+
+.contact-info a:hover {
+  opacity: 1;
 }
 
 contact-form {

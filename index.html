@@ -11,6 +11,7 @@
       href="/assets/img/favicon.png "
     />
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/responsive.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
@@ -27,11 +28,11 @@
             <li><a href="#tour">Tour</a></li>
             <li><a href="#contact">Contact</a></li>
             <li>
-              <a href=""> More <i class="fas fa-caret-down"></i> </a>
+              <a href="#"> More <i class="fas fa-caret-down"></i> </a>
               <ul class="subnav">
-                <li><a href="">Merchandise</a></li>
-                <li><a href="">Extras</a></li>
-                <li><a href="">Media</a></li>
+                <li><a href="#">Merchandise</a></li>
+                <li><a href="#">Extras</a></li>
+                <li><a href="#band">Media</a></li>
               </ul>
             </li>
           </ul>
@@ -43,6 +44,11 @@
           <i class="search-icon fas fa-search"></i>
         </div>
         <!-- End: Search button -->
+        <!-- Begin:Mobile Menu button -->
+        <div id="menu-mobile" class="menu-mobile-btn">
+          <i class="menu-icon fas fa-bars"></i>
+        </div>
+        <!-- End: Mobile Menu button -->
       </div>
 
       <!-- Begin: Slider -->
@@ -75,7 +81,7 @@
             ea commodo consequat.
           </p>
           <div class="row member-list">
-            <div class="col col-third text-center">
+            <div class="col col-third s-col-full mt-32 text-center">
               <p class="member-name">Name 1</p>
               <img
                 src="/assets/img/band/member1.jpg"
@@ -83,7 +89,7 @@
                 class="member-img"
               />
             </div>
-            <div class="col col-third text-center">
+            <div class="col col-third s-col-full mt-32 text-center">
               <p class="member-name">Name 2</p>
               <img
                 src="/assets/img/band/member1.jpg"
@@ -91,7 +97,7 @@
                 class="member-img"
               />
             </div>
-            <div class="col col-third text-center">
+            <div class="col col-third s-col-full mt-32 text-center">
               <p class="member-name">Name 3</p>
               <img
                 src="/assets/img/band/member1.jpg"
@@ -116,7 +122,7 @@
             </ul>
             <!-- Places -->
             <div class="row places-list">
-              <div class="col col-third">
+              <div class="col col-third s-col-full mt-16">
                 <img
                   src="/assets//img/places/place1.jpg"
                   alt="New York"
@@ -131,7 +137,7 @@
                   <a href="#" class="btn">Buy Tickets</a>
                 </div>
               </div>
-              <div class="col col-third">
+              <div class="col col-third s-col-full mt-16">
                 <img
                   src="/assets//img/places/place2.jpg"
                   alt="Paris"
@@ -146,7 +152,7 @@
                   <a href="#" class="btn">Buy Tickets</a>
                 </div>
               </div>
-              <div class="col col-third">
+              <div class="col col-third s-col-full mt-16">
                 <img
                   src="/assets//img/places/place3.jpg"
                   alt="San Francisco"
@@ -171,15 +177,21 @@
           <h2 class="section-heading">CONTACT</h2>
           <p class="section-sub-heading">Fan? Drop a note!</p>
           <div class="row contact-content">
-            <div class="col col-half contact-info">
+            <div class="col col-half s-col-full contact-info">
               <p><i class="fas fa-map-marker-alt"></i>Chicago, US</p>
-              <p><i class="fas fa-phone"> </i>Phone: +00 151515</p>
-              <p><i class="fas fa-envelope"></i>Email: mail@mail.com</p>
+              <p>
+                <i class="fas fa-phone"> </i>Phone:
+                <a href="tel:+00 151515">+00 151515</a>
+              </p>
+              <p>
+                <i class="fas fa-envelope"></i>Email:
+                <a href="mailto:mail@mail.com">mail@mail.com </a>
+              </p>
             </div>
-            <div class="col col-half contact-form">
+            <div class="col col-half s-col-full contact-form">
               <form action="">
                 <div class="row">
-                  <div class="col col-half">
+                  <div class="col col-half s-col-full">
                     <input
                       type="text"
                       name=""
@@ -189,7 +201,7 @@
                       required
                     />
                   </div>
-                  <div class="col col-half">
+                  <div class="col col-half s-col-full s-mt-8">
                     <input
                       type="email"
                       name=""
@@ -213,7 +225,7 @@
                   </div>
                 </div>
                 <input
-                  class="btn mt-16 pull-right"
+                  class="contact-submit-btn btn mt-16 pull-right s-full-width"
                   type="submit"
                   value="SEND"
                 />
@@ -236,9 +248,39 @@
           <a href="#"><i class="fab fa-pinterest-p"></i></a
           ><a href="#"><i class="fab fa-twitter"></i></a>
           <a href="#"><i class="fab fa-linkedin"></i></a>
-          <p class="copyright">Powered by <a href="#">w3.css</a></p>
         </div>
+        <p class="copyright">Powered by <a href="#">w3.css</a></p>
       </div>
     </div>
+
+    <script>
+      var menuMobile = document.getElementById("menu-mobile");
+      var header = document.getElementById("header");
+      var headerHeight = header.clientHeight;
+      menuMobile.onclick = function () {
+        console.log(menuMobile);
+        var isClosed = header.clientHeight === headerHeight;
+        if (isClosed) {
+          header.style.height = "auto";
+        } else {
+          header.style.height = null;
+        }
+      };
+      var menuItems = document.querySelectorAll("#nav li a[href*='#']");
+      console.log(menuItems);
+      for (var i = 0; i < menuItems.length; i++) {
+        var menuItem = menuItems[i];
+        menuItem.onclick = function (event) {
+          var isParentMenu =
+            this.nextElementSibling &&
+            this.nextElementSibling.classList.contains("subnav");
+          if (isParentMenu) {
+            event.preventDefault();
+          } else {
+            header.style.height = null;
+          }
+        };
+      }
+    </script>
   </body>
 </html>
